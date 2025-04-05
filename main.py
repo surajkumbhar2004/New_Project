@@ -6,8 +6,9 @@ import os
 
 app = FastAPI()
 
-# File path for uploaded Excel file
-UPLOAD_DIR = "D:\\Python_Projects\\Match_Endpoint"
+UPLOAD_DIR = "uploaded_files"
+os.makedirs(UPLOAD_DIR, exist_ok=True)  # Ensure folder exists
+
 data_file = os.path.join(UPLOAD_DIR, "meldepCustomers.xlsx")
 
 # Function to load and clean data
